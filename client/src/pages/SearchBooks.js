@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
   Container,
   Col,
-  Form,
+ 
   Button,
   Card,
   Row
@@ -90,10 +90,10 @@ const SearchBooks = () => {
       <div className="text-light bg-dark p-5">
         <Container>
           <h1>Search for Books!</h1>
-          <Form onSubmit={handleFormSubmit}>
-            <Form.Row>
-              <Col xs={12} md={8}>
-                <Form.Control
+          <form onSubmit={handleFormSubmit}>
+         
+              
+                <input
                   name='searchInput'
                   value={searchInput}
                   onChange={(e) => setSearchInput(e.target.value)}
@@ -101,14 +101,14 @@ const SearchBooks = () => {
                   size='lg'
                   placeholder='Search for a book'
                 />
-              </Col>
-              <Col xs={12} md={4}>
+             
+              
                 <Button type='submit' variant='success' size='lg'>
                   Submit Search
                 </Button>
-              </Col>
-            </Form.Row>
-          </Form>
+            
+            
+          </form>
         </Container>
       </div>
 
